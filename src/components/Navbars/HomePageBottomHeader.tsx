@@ -5,36 +5,40 @@ import Link from "next/link";
 import * as Iconbs from "react-icons/bs";
 import React from "react";
 import { usePathname } from "next/navigation";
+import FeatureBar from "@src/components//FeatureBar";
 
 const HomePageBottomHeader = () => {
-	const pathname = usePathname();
+  const pathname = usePathname();
 
-	const phoneNumber = "09160001343";
-	return (
-		<nav
-			className={`hidden slg:flex justify-center gap-24 items-center w-full py-3 bg-primaryColor-300 transition`}
-		>
-			<div className='flex w-fit gap-8 overflow-hidden'>
-				{headerNavLinks.map((link) => (
-					<Link
-						key={link.id}
-						href={link.href}
-						className={`text-base font-[300] leading-[1.8] transition hover:text-effect relative group ${
-							pathname === link.href ? "text-effect" : "text-white"
-						}`}
-					>
-						{link.text}
-						<span
-							className={`h-[1px] inline-block bg-effect absolute left-0 -bottom-0 group-hover:w-full transition-width ease duration-300 ${
-								pathname === link.href ? "w-full" : "w-0"
-							}`}
-						>
-							&nbsp;
-						</span>
-					</Link>
-				))}
-			</div>
-			{/* <div className='flex justify-center text-white items-center gap-2'>
+  const phoneNumber = "09160001343";
+  return (
+    <>
+      <nav
+        className={`hidden slg:flex max-md:flex-col gap-24 items-center w-full py-3 bg-red-500 transition`}
+      >
+        <div>
+          <div className="flex w-full gap-8 overflow-hidden pl-12">
+            {headerNavLinks.map((link) => (
+              <Link
+                key={link.id}
+                href={link.href}
+                className={`text-base font-[300] leading-[1.8] transition hover:text-effect relative group ${
+                  pathname === link.href ? "text-effect" : "text-white"
+                }`}
+              >
+                {link.text}
+                <span
+                  className={`h-[1px] inline-block bg-effect absolute left-0 -bottom-0 group-hover:w-full transition-width ease duration-300 ${
+                    pathname === link.href ? "w-full" : "w-0"
+                  }`}
+                >
+                  &nbsp;
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+        {/* <div className='flex justify-center text-white items-center gap-2'>
 				<Iconbs.BsTelephone />
 				<div className='flex justify-center items-center'>
 					<span className='font-[300] leading-[1.8]'>Phone:&nbsp;</span>
@@ -46,8 +50,10 @@ const HomePageBottomHeader = () => {
 					</a>
 				</div>
 			</div> */}
-		</nav>
-	);
+      </nav>
+      <FeatureBar />
+    </>
+  );
 };
 
 export default HomePageBottomHeader;

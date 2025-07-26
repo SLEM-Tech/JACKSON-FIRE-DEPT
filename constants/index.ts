@@ -54,7 +54,7 @@ export const splitText = (text: string) => {
 	return text.split(/(?=[A-Z])/).join(" ");
 };
 
-export const CompanyName = "Duply";
+export const CompanyName = "Jackson Fire";
 
 export const statusStyles: { [key: string]: string } = {
 	completed: "text-emerald-500",
@@ -68,8 +68,8 @@ export const statusStyles: { [key: string]: string } = {
 };
 
 export const headerNavLinks: linksProps[] = [
-	{ id: 1, href: "/", text: "Home" },
-	{ id: 5, href: "/contact-us", text: "Contact Us" },
+	{ id: 1, href: "/category", text: "Accessories" },
+	{ id: 5, href: "/category", text: "Best Sellers" },
 ];
 
 export interface SectionProps {
