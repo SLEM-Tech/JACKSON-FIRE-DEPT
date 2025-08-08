@@ -16,13 +16,13 @@ const MainCategoryContent = () => {
 	return (
 		<>
 			{categoryWpIsLoading && (
-				<section className='mb-8'>
+				<section className='container mx-auto px-2 sm:px-6 mb-8'>
 					<div className='w-full h-[100px] sm:h-[270px] bg-gray-200 rounded-md animate-pulse' />
 				</section>
 			)}
 
 			{Categories && (
-				<div className=''>
+				<div className='container mx-auto px-2 sm:px-6 py-8'>
 					<h4 className='text-2xl mb-4 font-medium'>All Categories</h4>
 					<div className='grid grid-cols-4 gap-5'>
 						{Categories?.map((data) => (

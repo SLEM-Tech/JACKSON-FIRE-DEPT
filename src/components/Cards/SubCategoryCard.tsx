@@ -18,7 +18,7 @@ const SubCategoryCard = ({ id, image, name }: SubCategoryCardProps) => {
 	return (
 		<Link
 			href={`${"/category/" + convertToSlug(name) + "-" + id}`}
-			className={`flex flex-col gap-2 items-center group w-fit cursor-pointer rounded-sm bg-white border-[2px] border-transparent hover:border-primary/50 transition shrink-0 ${
+			className={`flex flex-col gap-2 items-center group w-fit cursor-pointer rounded-sm bg-white  transition shrink-0 ${
 				data === id ? "border-[2px]" : ""
 			}`}
 		>
@@ -39,10 +39,10 @@ const SubCategoryCard = ({ id, image, name }: SubCategoryCardProps) => {
 				)}
 			</div>
 
-			<h4
+			{/* <h4
 				dangerouslySetInnerHTML={{ __html: name }}
 				className='text-primaryColor-100 font-semibold leading-[1.5rem] pb-2 text-center'
-			/>
+			/> */}
 		</Link>
 	);
 };

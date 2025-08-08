@@ -584,13 +584,13 @@ const Header = () => {
           )}
         </div>
 
-        {pathname.includes("/category") ? (
+        {/* {pathname.includes("/category") ? (
           <CategoryPageBottomHeader />
         ) : pathname.includes("/home-item") ? (
           <ProductPageBottomHeader />
         ) : (
           <HomePageBottomHeader />
-        )}
+        )} */}
       </header>
 
       <Modal

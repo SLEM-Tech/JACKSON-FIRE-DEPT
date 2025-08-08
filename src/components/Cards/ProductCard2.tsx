@@ -106,17 +106,17 @@ const ProductCard2 = ({
 			</div>
 			<div className='flex-[.2] flex w-full flex-col px-2 pb-1'>
 				<div className='flex items-center justify-between'>
-					<h4 className='text-xs sm:text-base text-primary font-[400] leading-[1.8]'>
+					<h4 className='text-xs sm:text-base text-black font-[400] leading-[1.8]'>
 						{NewAmount ? <FormatMoney2 value={NewAmount} /> : "Out of Stock"}
 					</h4>
 					<div
 						className={`flex items-center gap-1 rounded-md text-white p-1 text-xs sm:text-sm transition ${
-							cartItemCount !== 0 && "bg-primary"
+							cartItemCount !== 0 && "bg-black"
 						}`}
 					>
 						{cartItemCount === 0 ? (
 							<RiShoppingBagFill
-								className='fill-primary text-2xl'
+								className='fill-black text-2xl'
 								onClick={handleCartClick}
 							/>
 						) : (
